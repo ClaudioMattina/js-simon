@@ -51,4 +51,6 @@ for(i = 0; i < 5; i++){
 
 titoloNumeri.innerHTML= numeriRandomici;
 
-setInterval(pulisci, 3000, "titoloNumeri")
+
+
+setTimeout(pulisci,3000,titoloNumeri)
