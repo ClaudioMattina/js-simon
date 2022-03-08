@@ -7,7 +7,7 @@ Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei num
 
 /* prende di riferimento un elemento nell'html */ /* ****************************************************** */
 /* creare una funzione che stampi numeri casuali */ /* ************************************ */
-/* creare un ciclo for che ne stampi 5 di numeri casuali */
+/* creare un ciclo for che ne stampi 5 di numeri casuali */ /* ************************************************ */
 /* i numeri generati dovranno sparire dopo 30 secondi */
 /* creare 5 promt dove l'utente inserisce i numeri */
 /* creare un array che paragoni i numeri dell'utente con quelli generati randomicamente */
@@ -28,6 +28,16 @@ function randomNumGenerator (minValue, maxValue){
 }
 
 
+function pulisci (elementId){
+    elementId.innerHTML = "";
+}
+
+
+
+
+
+
+
 
 
 let titoloNumeri = document.getElementById("numeri");
@@ -40,4 +50,5 @@ for(i = 0; i < 5; i++){
 }
 
 titoloNumeri.innerHTML= numeriRandomici;
-console.log(numeriRandomici)
+
+setInterval(pulisci, 3000, "titoloNumeri")
