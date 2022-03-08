@@ -42,8 +42,8 @@ function pulisci (elementId){
 
 let titoloNumeri = document.getElementById("numeri");
 let numeriRandomici = [];
-
-
+let numeriInseriti = [];
+let punteggio = 0;
 
 for(i = 0; i < 5; i++){
     numeriRandomici.push(randomNumGenerator(1,100));
@@ -58,6 +58,12 @@ setTimeout(pulisci,3000,titoloNumeri)
 setTimeout(function(){
     for( k = 0; k < 5; k++){
         let numeriUtente = parseInt(prompt("inserisci sti numerii"))
+        numeriInseriti.push(numeriUtente);
+        if(numeriRandomici.includes(numeri)){
+            punteggio = punteggio + 1;
+        }
     }
     
-}, 3000)
+}, 3000);
+
+console.log(punteggio)
