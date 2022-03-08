@@ -54,3 +54,10 @@ titoloNumeri.innerHTML= numeriRandomici;
 
 
 setTimeout(pulisci,3000,titoloNumeri)
+
+setTimeout(function(){
+    for( k = 0; k < 5; k++){
+        let numeriUtente = parseInt(prompt("inserisci sti numerii"))
+    }
+    
+}, 3000)
