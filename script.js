@@ -66,5 +66,6 @@ setTimeout(function(){
     }
     
 }, 3000);
-console.log(punteggio)
+
+document.getElementById("point").innerHTML=punteggio;
 
