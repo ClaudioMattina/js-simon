@@ -39,33 +39,39 @@ function pulisci (elementId){
 
 
 
-
+/* prendo l'elemento html dove ci saranno scritti i numeri randomici generati */
 let titoloNumeri = document.getElementById("numeri");
+/* creo un array con dentro i numeri randomici */
 let numeriRandomici = [];
-let numeriParagone = [];
+/* creo una variabile punteggio che dovrà aumentare */
 let punteggio = 0;
 
+/* creo un ciclo for che genera 5 numeri randomici */
 for(i = 0; i < 5; i++){
     numeriRandomici.push(randomNumGenerator(1,100));
 }
 
+/* stampo nell'html i 5 numeri randomici */
 titoloNumeri.innerHTML= numeriRandomici;
 
-numeriRandomici.push(numeriParagone);
 
 
+/* dopo 3 secondi i numeri randomici generati e stampati si cancellano */
 setTimeout(pulisci,3000,titoloNumeri)
 
+/* dopo 3 secondi si generano 5 promt dove l'utente inserisce il numero */
 setTimeout(function(){
     for( k = 0; k < 5; k++){
+
         let numeriUtente = parseInt(prompt("inserisci sti numerii"))
-        numeriParagone.push(numeriUtente)
-        if(numeriParagone.includes(numeriUtente)){
-            punteggio = punteggio + 1;
+        if(numeriRandomici.includes(numeriUtente)){
+            punteggio ++
         }
     }
     
 }, 3000);
+
+console.log(numeriRandomici)
 
 document.getElementById("point").innerHTML=punteggio;
 
