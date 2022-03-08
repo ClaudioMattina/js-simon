@@ -37,7 +37,7 @@ let numeriRandomici = [];
 
 for(i = 0; i < 5; i++){
     numeriRandomici.push(randomNumGenerator(1,100));
-    
 }
 
+titoloNumeri.innerHTML= numeriRandomici;
 console.log(numeriRandomici)
