@@ -59,11 +59,11 @@ setTimeout(function(){
     for( k = 0; k < 5; k++){
         let numeriUtente = parseInt(prompt("inserisci sti numerii"))
         numeriInseriti.push(numeriUtente);
-        if(numeriRandomici.includes(numeri)){
+        if(numeriRandomici.includes[numeriInseriti]){
             punteggio = punteggio + 1;
         }
     }
     
 }, 3000);
-
+console.log(numeriInseriti)
 console.log(punteggio)
