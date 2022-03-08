@@ -8,8 +8,8 @@ Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei num
 /* prende di riferimento un elemento nell'html */ /* ****************************************************** */
 /* creare una funzione che stampi numeri casuali */ /* ************************************ */
 /* creare un ciclo for che ne stampi 5 di numeri casuali */ /* ************************************************ */
-/* i numeri generati dovranno sparire dopo 30 secondi */
-/* creare 5 promt dove l'utente inserisce i numeri */
+/* i numeri generati dovranno sparire dopo 30 secondi */ /* **************************** */
+/* creare 5 promt dove l'utente inserisce i numeri */ /* ****************** */
 /* creare un array che paragoni i numeri dell'utente con quelli generati randomicamente */
 /* stampare il risultato di quanti numeri sono stati azzeccati dall'utente */
 
@@ -42,7 +42,7 @@ function pulisci (elementId){
 
 let titoloNumeri = document.getElementById("numeri");
 let numeriRandomici = [];
-let numeriInseriti = [];
+let numeriParagone = [];
 let punteggio = 0;
 
 for(i = 0; i < 5; i++){
@@ -51,6 +51,7 @@ for(i = 0; i < 5; i++){
 
 titoloNumeri.innerHTML= numeriRandomici;
 
+numeriRandomici.push(numeriParagone);
 
 
 setTimeout(pulisci,3000,titoloNumeri)
@@ -58,12 +59,12 @@ setTimeout(pulisci,3000,titoloNumeri)
 setTimeout(function(){
     for( k = 0; k < 5; k++){
         let numeriUtente = parseInt(prompt("inserisci sti numerii"))
-        numeriInseriti.push(numeriUtente);
-        if(numeriRandomici.includes[numeriInseriti]){
+        numeriParagone.push(numeriUtente)
+        if(numeriParagone.includes(numeriUtente)){
             punteggio = punteggio + 1;
         }
     }
     
 }, 3000);
-console.log(numeriInseriti)
 console.log(punteggio)
+
