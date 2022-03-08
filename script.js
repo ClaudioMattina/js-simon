@@ -65,13 +65,13 @@ setTimeout(function(){
 
         let numeriUtente = parseInt(prompt("inserisci sti numerii"))
         if(numeriRandomici.includes(numeriUtente)){
-            punteggio ++
+            punteggio++
         }
     }
-    
+    document.getElementById("point").innerHTML=punteggio;
 }, 3000);
 
 console.log(numeriRandomici)
 
-document.getElementById("point").innerHTML=punteggio;
+
 
